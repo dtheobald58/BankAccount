@@ -7,7 +7,7 @@ using System.IO;
 
 namespace BankAccount
 {
-    class Savings : Account
+    class Savings : Account , IMenu
     {
         //constructors
         public Savings(string firstName, string lastName, string accType, string accNum, double accBal)
@@ -20,22 +20,24 @@ namespace BankAccount
         }
 
         //methods
-        public override void Deposit()
+        public void Deposit()
         {
             Console.WriteLine("Current account balance: $" + Balance + "\n");
             Console.WriteLine("Please enter the amount you are depositing.\n");
             double addToAcc = double.Parse(Console.ReadLine());
-            Console.WriteLine("\nCurrent transaction: +$" + addToAcc);
+            Console.Write("\nCurrent transaction: ");
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("+$" + addToAcc + "\n"); Console.ForegroundColor = ConsoleColor.White;
             Balance += addToAcc;
             Console.WriteLine("New savings account balance: $" + Balance);    
         }
 
-        public override void Withdraw()
+        public void Withdraw()
         {
             Console.WriteLine("Current account balance: $" + Balance + "\n");
             Console.WriteLine("Please enter the amount you are withdrawing.\n");
             double subFromAcc = double.Parse(Console.ReadLine());
-            Console.WriteLine("\nCurrent transaction: -$" + subFromAcc);
+            Console.Write("\nCurrent transaction: ");
+            Console.ForegroundColor = ConsoleColor.Red; Console.Write("-$" + subFromAcc + "\n"); Console.ForegroundColor = ConsoleColor.White;
             Balance -= subFromAcc;
             Console.WriteLine("New savings account balance: $" + Balance);
         }

@@ -34,10 +34,6 @@ namespace BankAccount
             //none since class is abstract       
 
         //methods
-        public void Greet (string userName)
-        {
-            Console.WriteLine("Hello " + accountFirstName + ",\n\nPlease select an account:");
-        }
 
         public virtual string AccountSummary (string userAndAccType)
         {
@@ -61,10 +57,6 @@ namespace BankAccount
                 Console.Write("{0}, {1}\n\n Reserve Account\n{2}", accountLastName, accountFirstName, accountNum);
             }
         }
-
-        public abstract void Withdraw();
-
-        public abstract void Deposit();
         
     }
 }
