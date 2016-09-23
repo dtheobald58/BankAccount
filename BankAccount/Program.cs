@@ -16,7 +16,8 @@ namespace BankAccount
             Checking DGilbertChecking = new Checking("Dan", "Gilbert", "checking", "1290347856", 20000000);
             Reserve DGilbertReserve = new Reserve("Dan", "Gilbert", "reserve", "2109438765", 12500000);
 
-            Console.Write
+            Console.Write("Hello Dan Gilbert,\n\nPlease choose an option below:\n");
+            
             
         }
 
