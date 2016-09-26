@@ -22,17 +22,20 @@ namespace BankAccount
         //methods
         public void Deposit()
         {
+            Console.Clear();
             Console.WriteLine("Current account balance: $" + Balance + "\n");
             Console.WriteLine("Please enter the amount you are depositing.\n");
             double addToAcc = double.Parse(Console.ReadLine());
             Console.Write("\nCurrent transaction: ");
             Console.ForegroundColor = ConsoleColor.Green; Console.Write("+$" + addToAcc + "\n"); Console.ForegroundColor = ConsoleColor.White;
             Balance += addToAcc;
-            Console.WriteLine("New savings account balance: $" + Balance);    
+            Console.WriteLine("New savings account balance: $" + Balance);
+            Console.ReadLine();
         }
 
         public void Withdraw()
         {
+            Console.Clear();
             Console.WriteLine("Current account balance: $" + Balance + "\n");
             Console.WriteLine("Please enter the amount you are withdrawing.\n");
             double subFromAcc = double.Parse(Console.ReadLine());
@@ -40,6 +43,7 @@ namespace BankAccount
             Console.ForegroundColor = ConsoleColor.Red; Console.Write("-$" + subFromAcc + "\n"); Console.ForegroundColor = ConsoleColor.White;
             Balance -= subFromAcc;
             Console.WriteLine("New savings account balance: $" + Balance);
+            Console.ReadLine();
         }
     }
 }

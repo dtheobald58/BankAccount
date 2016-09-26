@@ -46,15 +46,15 @@ namespace BankAccount
         {
             if (accountType == "checking")
             {
-                Console.Write("{0}, {1}\n\n Checking Account\n{2}", accountLastName, accountFirstName, accountNum);
+                Console.Write("{0}, {1}\n\nChecking Account\n{2}\n\n", accountLastName, accountFirstName, accountNum);
             }
             else if (accountType == "savings")
             {
-                Console.Write("{0}, {1}\n\n Savings Account\n{2}", accountLastName, accountFirstName, accountNum);
+                Console.Write("{0}, {1}\n\nSavings Account\n{2}\n\n", accountLastName, accountFirstName, accountNum);
             }
             else if (accountType == "reserve")
             {
-                Console.Write("{0}, {1}\n\n Reserve Account\n{2}", accountLastName, accountFirstName, accountNum);
+                Console.Write("{0}, {1}\n\nReserve Account\n{2}\n\n", accountLastName, accountFirstName, accountNum);
             }
         }
         
